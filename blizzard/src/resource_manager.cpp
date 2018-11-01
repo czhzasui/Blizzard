@@ -53,20 +53,29 @@ int ResourceManager::loadTexture2D(std::string name, std::string file, bool save
 }
 
 int ResourceManager::loadTexture2D(std::string name, cv::Mat image, bool save) {
-    Texture2D texture2D;
     if (image.data == nullptr) {
         printf("#loadTexture2D err\n");
         return -1;
     }
-    if (image.channels() == 3) {
-        texture2D.Image_Format = GL_BGR;
-        texture2D.Internal_Format = GL_RGB;
-    } else if (image.channels() == 4) {
-        texture2D.Image_Format = GL_BGRA;
-        texture2D.Internal_Format = GL_RGBA;
+    if(textures.find(name) == textures.end()){
+        Texture2D Texture2D;
+        if (image.channels() == 1) {
+            printf("#TextureVision update error: channels = 1\n");
+            printf("\tAuto change into RGB\n");
+            cv::cvtColor(image, image, CV_GRAY2RGB);
+        }
+        if (image.channels() == 3) {
+            Texture2D.Internal_Format = GL_RGB;
+            Texture2D.Image_Format = GL_BGR;
+        } else if (image.channels() == 4) {
+            Texture2D.Internal_Format = GL_RGBA;
+            Texture2D.Image_Format = GL_RGBA;
+        }
+        Texture2D.update(image.size().width, image.size().height, image.data);
+        textures[name] = Texture2D;
+    } else{
+        textures[name].update(image.size().width, image.size().height, image.data);
     }
-    texture2D.update(image.size().width, image.size().height, image.data);
-    textures[name] = texture2D;
     if (save) {
         images[name] = image;
     }
@@ -85,16 +94,9 @@ int ResourceManager::writeTexture2D(std::string name, std::string file) {
 }
 
 Texture2D ResourceManager::getTexture2D(std::string name) {
-    if (images.find(name) == images.end()) {
+    if (textures.find(name) == textures.end()) {
         printf("#getTexture2D error, w/o %s\n", name.data());
     }
     return textures[name];
-}
-
-Texture2D ResourceManager::loadTextureVision(std::string name, cv::Mat *img) {
-    //PicData picData = Vision::read(file_path);
-    TextureVision textureVision;
-    textureVision.update(img);
-    textures[name] = textureVision;
 }
 

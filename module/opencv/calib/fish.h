@@ -6,6 +6,7 @@
 #define OPENGL_PRO_FISH_H
 
 #include <vision/vision.h>
+#include "resource_manager.h"
 #include <dconfig.h>
 
 class Fish {

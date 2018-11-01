@@ -12,7 +12,7 @@
 #include "texture.h"
 #include "dconfig.h"
 #include "resource_manager.h"
-#include "texture_vision.h"
+#include "vision/vision.h"
 
 class SpriteRenderer {
 public:

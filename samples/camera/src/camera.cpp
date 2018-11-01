@@ -13,6 +13,7 @@ void Camera::init() {
     glEnable(GL_CULL_FACE);
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+    glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
     this->state = GAME_ACTIVE;
 
     ResourceManager::loadShader("sprite", defaultVshaderStr, defaultFshaderStr);
@@ -30,6 +31,12 @@ void Camera::init() {
     if (!capture.isOpened()) {
         printf("#camera open failure\n");
     }
+
+    //cv::Mat cb_source = Vision::read("../samples/camera/res/j59r005.png");
+    //ResourceManager::loadTexture2D("cb_source", cb_source);
+    //Zhang::init(cb_source, 8, 6);
+
+
 }
 
 void Camera::destory() {
@@ -37,9 +44,8 @@ void Camera::destory() {
 }
 
 void Camera::processInput() {
-    cv::Mat frame;
-    capture >> frame;
-    ResourceManager::loadTextureVision("cb_final", &frame);
+    /*capture >> frame;
+    ResourceManager::loadTexture2D("cb_final", frame);*/
 }
 
 void Camera::update() {
@@ -48,7 +54,7 @@ void Camera::update() {
 
 void Camera::render(GLFWwindow *window) {
     if (this->state == GAME_ACTIVE) {
-        spriteRender->drawSprite(ResourceManager::getTexture2D("cb_final"), glm::vec2(0, 0),
+        spriteRender->drawSprite(ResourceManager::getTexture2D("cb_corner"), glm::vec2(0, 0),
                                  glm::vec2(SCREEN_WIDTH, SCREEN_HEIGHT), 0.0f);
         usleep(1000 * 30);
     }

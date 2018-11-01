@@ -4,7 +4,7 @@
 
 #include "checkerborad.h"
 
-cv::Mat Vision::makeCheckerboard(int bkgWidth, int bkgHeight, int sqXnum, int sqYnum, int thickNum, char *savePath) {
+cv::Mat Checkerborad::makeCheckerboard(int bkgWidth, int bkgHeight, int sqXnum, int sqYnum, int thickNum, char *savePath) {
     if(sqYnum == 0){
         sqYnum = sqXnum;
     }
@@ -22,23 +22,23 @@ cv::Mat Vision::makeCheckerboard(int bkgWidth, int bkgHeight, int sqXnum, int sq
         for (int j = 0; j < img.cols; j++) {
 
             if (i < thickNum || i >= thickNum + bkgHeight || j < thickNum || j >= thickNum + bkgWidth) {
-                img.at<Vec<uchar, 4>>(i, j) = cv::Scalar(0, 0, 0, 255);
+                img.at<cv::Vec<uchar, 4>>(i, j) = cv::Scalar(0, 0, 0, 255);
                 continue;
             }
             checkboardX = j - thickNum;
             checkboardY = i - thickNum;
             if (checkboardY / yLen % 2 == 0) {
                 if ((checkboardX) / xLen % 2 == 0) {
-                    img.at<Vec<uchar, 4>>(i, j) = cv::Scalar(255, 255, 255, 255);
+                    img.at<cv::Vec<uchar, 4>>(i, j) = cv::Scalar(255, 255, 255, 255);
                 } else {
-                    img.at<Vec<uchar, 4>>(i, j) = cv::Scalar(0, 0, 0, 255);
+                    img.at<cv::Vec<uchar, 4>>(i, j) = cv::Scalar(0, 0, 0, 255);
                 }
             }
             else{
                 if ((checkboardX) / xLen % 2 != 0) {
-                    img.at<Vec<uchar, 4>>(i, j) = cv::Scalar(255, 255, 255, 255);
+                    img.at<cv::Vec<uchar, 4>>(i, j) = cv::Scalar(255, 255, 255, 255);
                 } else {
-                    img.at<Vec<uchar, 4>>(i, j) = cv::Scalar(0, 0, 0, 255);
+                    img.at<cv::Vec<uchar, 4>>(i, j) = cv::Scalar(0, 0, 0, 255);
                 }
             }
         }

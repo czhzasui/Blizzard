@@ -11,7 +11,7 @@
 #include <stb_image/stb_image.h>
 #include "shader.h"
 #include "texture.h"
-#include "texture_vision.h"
+#include "vision/vision.h"
 
 class ResourceManager {
 public:
@@ -35,8 +35,6 @@ public:
     static int writeTexture2D(std::string name, std::string file);
 
     static Texture2D getTexture2D(std::string name);
-
-    static Texture2D loadTextureVision(std::string name, cv::Mat *img);
 
     static void clear();
 

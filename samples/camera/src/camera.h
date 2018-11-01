@@ -6,10 +6,14 @@
 #define OPENGL_PRO_CAMERA_H
 
 #include <game.h>
+#include "calib/zhu.h"
+#include <calib/zhang.h>
+#include "trackline/trackline.h"
 
 class Camera : public Game {
 public:
     SpriteRenderer *spriteRender;
+    cv::Mat frame;
 
     cv::VideoCapture capture;
 

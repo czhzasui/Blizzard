@@ -7,18 +7,18 @@
 
 int Zhang::init(cv::Mat cb_source, int aqXnum, int aqYnum) {
 
-    cv::imwrite("../blizzard/res/calibration/cb_source.png", cb_source);
+    cv::imwrite("../samples/camera/res/cb_source.png", cb_source);
 
     printf("#Start scan corner\n");
     cv::Mat img;
     std::vector<cv::Point2f> image_points;
     std::vector<std::vector<cv::Point2f>> image_points_seq; /* 保存检测到的所有角点 */
-    if (cv::findChessboardCorners(cb_source, cv::Size(aqXnum, aqYnum), image_points, 0) == 0) {
+    if (cv::findChessboardCorners(cb_source, cv::Size(aqXnum, aqYnum), image_points) == 0) {
         printf("#Error: Corners not find ");
         return 0;
     } else {
         cvtColor(cb_source, img, CV_RGBA2GRAY);
-        cv::imwrite("../blizzard/res/calibration/cb_gray.png", img);
+        cv::imwrite("../samples/camera/res/cb_gray.png", img);
         //find4QuadCornerSubpix(img, image_points, cv::Size(5, 5));
 
         cv::cornerSubPix(img, image_points, cv::Size(11, 11), cv::Size(-1, -1),
@@ -29,7 +29,7 @@ int Zhang::init(cv::Mat cb_source, int aqXnum, int aqYnum) {
         cv::Mat cb_corner;
         cb_corner = cb_source.clone();
         drawChessboardCorners(cb_corner, cv::Size(aqXnum, aqYnum), image_points, true);
-        cv::imwrite("../blizzard/res/calibration/cb_corner.png", cb_corner);
+        cv::imwrite("../samples/camera/res/cb_corner.png", cb_corner);
     }
 
     printf("#Start calibrate\n");
@@ -83,12 +83,12 @@ int Zhang::init(cv::Mat cb_source, int aqXnum, int aqYnum) {
     undistort(cb_source, cb_final, cameraMatrix, distCoeffs);
 
 
-    cv::imwrite("../blizzard/res/calibration/cb_final.png", cb_final);
-    ResourceManager::loadTextureVision("cb_final", &cb_final);
-    cv::Mat cb_gray = Vision::read("../blizzard/res/calibration/cb_gray.png");
-    ResourceManager::loadTextureVision("cb_gray", &cb_gray);
-    cv::Mat cb_corner = Vision::read("../blizzard/res/calibration/cb_corner.png");
-    ResourceManager::loadTextureVision("cb_corner", &cb_corner);
+    cv::imwrite("../samples/camera/res/cb_final.png", cb_final);
+    ResourceManager::loadTexture2D("cb_final", cb_final);
+    cv::Mat cb_gray = Vision::read("../samples/camera/res/cb_gray.png");
+    ResourceManager::loadTexture2D("cb_gray", cb_gray);
+    cv::Mat cb_corner = Vision::read("../samples/camera/res/cb_corner.png");
+    ResourceManager::loadTexture2D("cb_corner", cb_corner);
 
     return 0;
 }

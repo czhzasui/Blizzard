@@ -38,6 +38,8 @@ int main() {
     blizzard.init();
 
     while (!glfwWindowShouldClose(window)) {
+        clock_t start = clock();
+
         glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
 
@@ -47,6 +49,11 @@ int main() {
         glfwSwapBuffers(window);
         glfwPollEvents();
 
+        clock_t end = clock();
+        int time_ms = (double) (end - start) / CLOCKS_PER_SEC * 1000;
+        if ((33 - time_ms) > 0) {
+            usleep((33 - time_ms));
+        }
     }
 
     glfwTerminate();

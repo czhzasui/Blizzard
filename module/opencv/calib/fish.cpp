@@ -101,11 +101,11 @@ int Fish::init(cv::Mat cb_source, int aqXnum, int aqYnum) {
 
     cv::imwrite("../blizzard/res/calibration/cb_final.png", cb_final);
 
-    ResourceManager::loadTextureVision("cb_final", &cb_final);
+    ResourceManager::loadTexture2D("cb_final", cb_final);
     cv::Mat cb_gray = Vision::read("../blizzard/res/calibration/cb_gray.png");
-    ResourceManager::loadTextureVision("cb_gray", &cb_gray);
+    ResourceManager::loadTexture2D("cb_gray", cb_gray);
     cv::Mat cb_corner = Vision::read("../blizzard/res/calibration/cb_corner.png");
-    ResourceManager::loadTextureVision("cb_corner", &cb_corner);
+    ResourceManager::loadTexture2D("cb_corner", cb_corner);
 
     return 0;
 }

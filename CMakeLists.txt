@@ -37,6 +37,8 @@ target_link_libraries(bootanimation glfw
 aux_source_directory(blizzard/lib/glad CAMERA_SOURCE_FILES)
 aux_source_directory(blizzard/src CAMERA_SOURCE_FILES)
 aux_source_directory(module/opencv/vision CAMERA_SOURCE_FILES)
+aux_source_directory(module/opencv/calib CAMERA_SOURCE_FILES)
+aux_source_directory(module/opencv/trackline CAMERA_SOURCE_FILES)
 aux_source_directory(samples/camera/src CAMERA_SOURCE_FILES)
 
 add_executable(camera ${CAMERA_SOURCE_FILES})
