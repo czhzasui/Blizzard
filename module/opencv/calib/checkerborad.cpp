@@ -2,7 +2,7 @@
 // Created by czh on 18-10-31.
 //
 
-#include "calib.h"
+#include "checkerborad.h"
 
 cv::Mat Vision::makeCheckerboard(int bkgWidth, int bkgHeight, int sqXnum, int sqYnum, int thickNum, char *savePath) {
     if(sqYnum == 0){

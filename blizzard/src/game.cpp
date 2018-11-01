@@ -16,7 +16,7 @@ void Game::init() {
 }
 
 void Game::destory() {
-    //ResourceManager::clear();
+    ResourceManager::clear();
 }
 
 void Game::processInput(float dt) {

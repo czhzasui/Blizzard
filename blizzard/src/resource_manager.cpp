@@ -3,12 +3,12 @@
 //
 
 #include "resource_manager.h"
-#include "persioncv/vision/vision.h"
+#include "vision/vision.h"
 
 
-std::map<std::string, Texture2D>    ResourceManager::textures;
-std::map<std::string, Shader>   ResourceManager::shaders;
-std::map<std::string, cv::Mat>   ResourceManager::images;
+std::map<std::string, Texture2D> ResourceManager::textures;
+std::map<std::string, Shader> ResourceManager::shaders;
+std::map<std::string, cv::Mat> ResourceManager::images;
 
 void ResourceManager::clear() {
 

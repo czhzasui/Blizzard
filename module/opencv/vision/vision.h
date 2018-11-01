@@ -2,8 +2,8 @@
 // Created by czh on 18-10-31.
 //
 
-#ifndef OPENGL_PRO_CV_RW_H
-#define OPENGL_PRO_CV_RW_H
+#ifndef BLIZZARD_VISION_H
+#define BLIZZARD_VISION_H
 
 #include "opencv2/opencv.hpp"
 #include <opencv2/core/core.hpp>
@@ -20,4 +20,4 @@ public:
 };
 
 
-#endif //OPENGL_PRO_CV_RW_H
+#endif //BLIZZARD_VISION_H

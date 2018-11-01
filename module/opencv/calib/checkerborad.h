@@ -2,8 +2,8 @@
 // Created by czh on 18-10-31.
 //
 
-#ifndef OPENGL_PRO_CALIB_H
-#define v
+#ifndef BLIZZARD_CHECKERBOARD_H
+#define BLIZZARD_CHECKERBOARD_H
 
 #include "opencv2/opencv.hpp"
 #include <opencv2/core/core.hpp>
@@ -17,4 +17,4 @@ public:
 };
 
 
-#endif //OPENGL_PRO_CALIB_H
+#endif //BLIZZARD_CHECKERBOARD_H

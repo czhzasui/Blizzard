@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.10)
-project(OpenGL_Pro)
+project(Blizzard)
 
 set(CMAKE_CXX_STANDARD 14)
 
@@ -7,7 +7,7 @@ set(CMAKE_CXX_STANDARD 14)
 include_directories(blizzard/lib)
 include_directories(blizzard/src)
 include_directories(blizzard/comm)
-include_directories(module)
+include_directories(module/opencv)
 
 find_package(OpenCV REQUIRED)
 find_package(glfw3 REQUIRED)
@@ -36,8 +36,8 @@ target_link_libraries(bootanimation glfw
 #cmake for camera
 aux_source_directory(blizzard/lib/glad CAMERA_SOURCE_FILES)
 aux_source_directory(blizzard/src CAMERA_SOURCE_FILES)
-aux_source_directory(module/persioncv/vision CAMERA_SOURCE_FILES)
-aux_source_directory(samples/camera/res CAMERA_SOURCE_FILES)
+aux_source_directory(module/opencv/vision CAMERA_SOURCE_FILES)
+aux_source_directory(samples/camera/src CAMERA_SOURCE_FILES)
 
 add_executable(camera ${CAMERA_SOURCE_FILES})
 
