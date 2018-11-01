@@ -11,29 +11,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f03f5b9-2805-43da-b657-5b65bd743b4e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blizzard/lib/glad/glad.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blizzard/lib/glad/glad.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blizzard/lib/glad/khrplatform.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blizzard/lib/stb_image/stb_image.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blizzard/lib/stb_image/stb_image.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blizzard/src/dconfig.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blizzard/src/game.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blizzard/src/game.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blizzard/src/game_object.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blizzard/src/game_object.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blizzard/src/resource_manager.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blizzard/src/resource_manager.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blizzard/src/shader.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blizzard/src/shader.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blizzard/src/sprite_renderer.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blizzard/src/sprite_renderer.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blizzard/src/texture.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blizzard/src/texture.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blizzard/src/texture_vision.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blizzard/src/texture_vision.h" afterDir="false" />
-    </list>
+    <list default="true" id="9f03f5b9-2805-43da-b657-5b65bd743b4e" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -323,15 +301,16 @@
       <workItem from="1540975904794" duration="22000" />
       <workItem from="1540990533320" duration="40000" />
       <workItem from="1540997567653" duration="53000" />
-      <workItem from="1541001863892" duration="1057000" />
+      <workItem from="1541001863892" duration="1256000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10427000" />
+    <option name="totallyTimeSpent" value="10626000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19194704" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
