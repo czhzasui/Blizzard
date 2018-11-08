@@ -2,6 +2,7 @@
 // Created by czh on 18-10-31.
 //
 
+#include <calib/checkerborad.h>
 #include "camera.h"
 
 Camera::Camera(GLuint width, GLuint height) : Game(width, height) {
@@ -31,10 +32,12 @@ void Camera::init() {
     if (!capture.isOpened()) {
         printf("#camera open failure\n");
     }
+    printf("#makeCheckerboard\n");
+    Checkerborad::makeCheckerboard(SCREEN_WIDTH, SCREEN_HEIGHT, 10, 10);
 
-    //cv::Mat cb_source = Vision::read("../samples/camera/res/j59r005.png");
-    //ResourceManager::loadTexture2D("cb_source", cb_source);
-    //Zhang::init(cb_source, 8, 6);
+    cv::Mat cb_source = Vision::read("../samples/camera/res/j59r002.jpg");
+    ResourceManager::loadTexture2D("cb_source", cb_source);
+    Zhang::init(cb_source, 9, 4);
 
 
 }
@@ -54,8 +57,8 @@ void Camera::update() {
 
 void Camera::render(GLFWwindow *window) {
     if (this->state == GAME_ACTIVE) {
-        spriteRender->drawSprite(ResourceManager::getTexture2D("cb_corner"), glm::vec2(0, 0),
-                                 glm::vec2(SCREEN_WIDTH, SCREEN_HEIGHT), 0.0f);
+        spriteRender->drawSprite(ResourceManager::getTexture2D("cb_source"), glm::vec2(640, 0),
+                                 glm::vec2(200, 100), 45.0f);
         usleep(1000 * 30);
     }
 }

@@ -12,15 +12,15 @@ include_directories(module/opencv)
 find_package(OpenCV REQUIRED)
 find_package(glfw3 REQUIRED)
 #cmake for bootanimation
-#[[aux_source_directory(blizzard/lib/glad BOOTANIMATION_SOURCE_FILES)
-aux_source_directory(blizzard/lib/stb_image BOOTANIMATION_SOURCE_FILES)
-aux_source_directory(blizzard/src BOOTANIMATION_SOURCE_FILES)
-aux_source_directory(module/persioncv/vision BOOTANIMATION_SOURCE_FILES)
-aux_source_directory(samples/animation BOOTANIMATION_SOURCE_FILES)
+aux_source_directory(blizzard/lib/glad ANIMATION_SOURCE_FILES)
+aux_source_directory(blizzard/lib/stb_image ANIMATION_SOURCE_FILES)
+aux_source_directory(blizzard/src ANIMATION_SOURCE_FILES)
+aux_source_directory(module/opencv/vision ANIMATION_SOURCE_FILES)
+aux_source_directory(samples/animation/src/ ANIMATION_SOURCE_FILES)
 
-add_executable(bootanimation ${BOOTANIMATION_SOURCE_FILES})
+add_executable(animation ${ANIMATION_SOURCE_FILES})
 
-target_link_libraries(bootanimation glfw
+target_link_libraries(animation glfw
         -lpthread
         glfw
         ${OpenCV_LIBS}
@@ -31,14 +31,14 @@ target_link_libraries(bootanimation glfw
         -lopencv_flann
         -lopencv_imgproc
         -lopencv_core
-        -lopencv_imgcodecs)]]
+        -lopencv_imgcodecs)
 
 #cmake for camera
 aux_source_directory(blizzard/lib/glad CAMERA_SOURCE_FILES)
 aux_source_directory(blizzard/src CAMERA_SOURCE_FILES)
 aux_source_directory(module/opencv/vision CAMERA_SOURCE_FILES)
 aux_source_directory(module/opencv/calib CAMERA_SOURCE_FILES)
-aux_source_directory(module/opencv/trackline CAMERA_SOURCE_FILES)
+#aux_source_directory(module/opencv/trackline CAMERA_SOURCE_FILES)
 aux_source_directory(samples/camera/src CAMERA_SOURCE_FILES)
 
 add_executable(camera ${CAMERA_SOURCE_FILES})

@@ -128,7 +128,7 @@ private:
 
 
     const char *vShaderStr =
-            "#version 300 es                                            \n"
+            "#version 330 core                                                    \n"
                     "uniform float k1;                                          \n"
                     "uniform float f;                                           \n"
                     "uniform float x0;                                          \n"
@@ -150,7 +150,7 @@ private:
                     "}                                                          \n";
 
     const char *fShaderStr =
-            "#version 300 es                                            \n"
+            "#version 330 core                                            \n"
                     "precision mediump float;                                   \n"
                     "flat in vec4 aColor;                                       \n"
                     "out vec4 fragColor;                                        \n"

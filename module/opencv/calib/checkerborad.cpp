@@ -9,14 +9,14 @@ cv::Mat Checkerborad::makeCheckerboard(int bkgWidth, int bkgHeight, int sqXnum, 
         sqYnum = sqXnum;
     }
     if(savePath == NULL){
-        char *defaultPath = (char *)"../res/calibration/maths.png";
+        char *defaultPath = (char *)"../samples/camera/res/maths.png";
         savePath = defaultPath;
     }
     int checkboardX = 0;//棋盘x坐标
     int checkboardY = 0;//棋盘y坐标
     int xLen = bkgWidth / sqXnum;//x方格长度
     int yLen = bkgHeight / sqYnum;//y方格长度
-    cv::Mat img(bkgHeight + thickNum * 2, bkgWidth + thickNum * 2, CV_8UC4, cv::Scalar(0, 255, 255, 255));
+    cv::Mat img(bkgHeight + thickNum * 2, bkgWidth + thickNum * 2, CV_8UC4, cv::Scalar(255, 0, 0, 255));
     for (int i = 0; i < img.rows; i++) {
 
         for (int j = 0; j < img.cols; j++) {

@@ -8,7 +8,7 @@
 #include <game.h>
 #include "calib/zhu.h"
 #include <calib/zhang.h>
-#include "trackline/trackline.h"
+#include "trackline.h"
 
 class Camera : public Game {
 public:

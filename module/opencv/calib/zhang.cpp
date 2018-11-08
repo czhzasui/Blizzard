@@ -35,10 +35,12 @@ int Zhang::init(cv::Mat cb_source, int aqXnum, int aqYnum) {
     printf("#Start calibrate\n");
     cv::Size square_size = cv::Size(14.2222, 12);
     std::vector<std::vector<cv::Point3f>> object_points; /* 保存标定板上角点的三维坐标 */
-    cv::Mat cameraMatrix = cv::Mat(3, 3, CV_32FC1, cv::Scalar::all(0)); /* 摄像机内参数矩阵 */
+    cv::Mat inMat = cv::Mat(3, 3, CV_32FC1, cv::Scalar::all(0)); /* 摄像机内参数矩阵 */
     cv::Mat distCoeffs = cv::Mat(1, 5, CV_32FC1, cv::Scalar::all(0)); /* 摄像机的5个畸变系数：k1,k2,p1,p2,k3 */
-    std::vector<cv::Mat> tvecsMat;  /* 每幅图像的旋转向量 */
-    std::vector<cv::Mat> rvecsMat;  /* 每幅图像的平移向量 */
+    std::vector<cv::Mat> tvecsMat;  /* 每幅图像的平移向量 */
+    std::vector<cv::Mat> rvecsMat;  /* 每幅图像的旋转向量 */
+
+    cv::Mat R33;
 
     std::vector<cv::Point3f> realPoint;
     for (int i = 0; i < aqYnum; i++) {
@@ -62,13 +64,18 @@ int Zhang::init(cv::Mat cb_source, int aqXnum, int aqYnum) {
     printf("#image size\n");
     std::cout << SCREEN_WIDTH << "*" << SCREEN_HEIGHT << std::endl;
 
-    cv::calibrateCamera(object_points, image_points_seq, cb_source.size(), cameraMatrix, distCoeffs, rvecsMat, tvecsMat,
+    cv::calibrateCamera(object_points, image_points_seq, cb_source.size(), inMat, distCoeffs, rvecsMat, tvecsMat,
                         CV_CALIB_FIX_K3);
 
-    std::cout << "tvecsMat:\n" << tvecsMat[0] << std::endl;
-    std::cout << "rvecsMat:\n" << rvecsMat[0] << std::endl;
 
-    std::cout << "#cameraMatrix:\n" << cameraMatrix << std::endl;
+    cv::Rodrigues(rvecsMat[0], R33);
+    std::cout << "rvecsMat:\n" << rvecsMat[0] << std::endl;
+    std::cout << "tvecsMat:\n" << tvecsMat[0] << std::endl;
+    std::cout << "R33:\n" << R33 << std::endl;
+
+
+
+    std::cout << "#inMat:\n" << inMat << std::endl;
     std::cout << "#distCoeffs:\n" << distCoeffs << std::endl;
 
     cv::Mat cb_final;
@@ -76,12 +83,11 @@ int Zhang::init(cv::Mat cb_source, int aqXnum, int aqYnum) {
     cv::Mat mapx = cv::Mat(cb_source.size(), CV_32FC1);
     cv::Mat mapy = cv::Mat(cb_source.size(), CV_32FC1);
     cv::Mat R = cv::Mat::eye(3, 3, CV_32F);
-    //initUndistortRectifyMap(cameraMatrix, distCoeffs, R, cv::Mat(), cb_source.size(), CV_32FC1,
-    //                        mapx, mapy);
-    //cv::remap(cb_source, cb_final, mapx, mapy, cv::INTER_LINEAR);
+    initUndistortRectifyMap(inMat, distCoeffs, R, cv::Mat(), cb_source.size(), CV_32FC1,
+                            mapx, mapy);
+    cv::remap(cb_source, cb_final, mapx, mapy, cv::INTER_LINEAR);
 
-    undistort(cb_source, cb_final, cameraMatrix, distCoeffs);
-
+    //undistort(cb_source, cb_final, inMat, distCoeffs);
 
     cv::imwrite("../samples/camera/res/cb_final.png", cb_final);
     ResourceManager::loadTexture2D("cb_final", cb_final);

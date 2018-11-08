@@ -21,8 +21,8 @@ void Animation::init() {
     projection = glm::ortho(0.0f, static_cast<GLfloat>(this->width), static_cast<GLfloat>(this->height), 0.0f, -1.0f, 1.0f);
     ResourceManager::getShader("sprite").setInteger("image", 0);
     ResourceManager::getShader("sprite").setMatrix4("projection", projection);
-    ResourceManager::loadTexture2D("opening1", "../blizzard/res/textures/opening0,1.png");
-    ResourceManager::loadTexture2D("opening2", "../blizzard/res/textures/opening1,2.png");
+    ResourceManager::loadTexture2D("opening1", "../samples/animation/res/textures/opening0,1.png");
+    ResourceManager::loadTexture2D("opening2", "../samples/animation/res/textures/opening1,2.png");
     ResourceManager::getShader("sprite").setVector4f("location", glm::vec4(1.0f, 1.0f, 0.0f, 0.0f));
 
     spriteRender = new SpriteRenderer(ResourceManager::getShader("sprite"));
