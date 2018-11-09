@@ -57,8 +57,7 @@ void Camera::update() {
 
 void Camera::render(GLFWwindow *window) {
     if (this->state == GAME_ACTIVE) {
-        spriteRender->drawSprite(ResourceManager::getTexture2D("cb_final"), glm::vec2(0, 0),
-                                 glm::vec2(1280, 480), 0.0f);
+        spriteRender->drawSprite(ResourceManager::getTexture2D("cb_final"), glm::vec2(1280, 480), glm::vec2(480, 240), 0.0f);
         usleep(1000 * 30);
     }
 }
