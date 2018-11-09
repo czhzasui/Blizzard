@@ -8,7 +8,14 @@
 #include <glad/glad.h>
 #include <iostream>
 #include <vector>
+#include <math.h>
 
+typedef struct {
+    float r;
+    float g;
+    float b;
+    float a;
+} Color;
 
 typedef struct {
     float r11;
@@ -26,13 +33,6 @@ typedef struct {
     float x0;
     float y0;
 } CameraParam;
-
-typedef struct {
-    float r;
-    float g;
-    float b;
-    float a;
-} Color;
 
 typedef struct _StaticLineParam{
     float startX;
@@ -60,23 +60,35 @@ typedef struct {
     float dist_bumper2rearaxle;//后轮至后保险杠距离
 } VehicleParam;
 
-struct TrackinglinePara {
-    StaticLineParam staticLineProp;
-    DynamicLineParam dynamicLineProp;
-    VehicleParam vehicleProp;
-    CameraParam cameraProp;
+struct TrackinglineParam {
+    bool hideDynamicLine;
     float swAngle;
-    bool hideOverlappingDynamicLine;
+    VehicleParam vehicleParam;
+    CameraParam cameraParam;
+    DynamicLineParam dynamicLineParam;
+    StaticLineParam staticLineParam;
 };
 
-class Trackline {
+class Trackline{
 public:
-    std::vector<GLfloat> m_fStaticVertices;
-    std::vector<GLubyte> m_nStaticIndices;
+    int staticVertexCnt;
+    std::vector<GLfloat> vertices;
+    std::vector<GLubyte> indices;
+    float m_fProjection[3][3] = {};
+    GLfloat lineWidth = 0.05;
 
     Trackline();
 
     ~Trackline();
+
+    void init();
+
+    void setMatrix();
+
+    void setStaticLine();
+
+    void setVertices(std::vector<GLfloat> &vec, GLfloat x, GLfloat y, Color color, bool alpha);
+
 
 private:
     const char *vShader =
@@ -111,7 +123,7 @@ private:
             "   fragColor = aColor;                                     \n"
             "}                                                          \n";
 
-    TrackinglinePara *trackinglinePara;
+    TrackinglineParam *trackinglineParam;
 };
 
 
