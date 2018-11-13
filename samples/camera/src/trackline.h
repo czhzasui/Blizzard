@@ -9,6 +9,8 @@
 #include <iostream>
 #include <vector>
 #include <math.h>
+#include <resource_manager.h>
+#include <sprite_renderer.h>
 
 typedef struct {
     float r;
@@ -72,7 +74,7 @@ struct TrackinglineParam {
 class Trackline{
 public:
     int staticVertexCnt;
-    std::vector<GLfloat> vertices;
+    std::vector<GLfloat> staticVertices;
     std::vector<GLubyte> indices;
     float m_fProjection[3][3] = {};
     GLfloat lineWidth = 0.05;
@@ -83,12 +85,15 @@ public:
 
     void init();
 
+    void deInit();
+
     void setMatrix();
 
     void setStaticLine();
 
     void setVertices(std::vector<GLfloat> &vec, GLfloat x, GLfloat y, Color color, bool alpha);
 
+    void render();
 
 private:
     const char *vShader =

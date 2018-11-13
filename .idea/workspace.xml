@@ -14,7 +14,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f03f5b9-2805-43da-b657-5b65bd743b4e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blizzard/src/game_object.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/blizzard/src/game_object.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blizzard/src/shader.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/blizzard/src/shader.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blizzard/src/shader.h" beforeDir="false" afterPath="$PROJECT_DIR$/blizzard/src/shader.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blizzard/src/sprite_renderer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/blizzard/src/sprite_renderer.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blizzard/src/sprite_renderer.h" beforeDir="false" afterPath="$PROJECT_DIR$/blizzard/src/sprite_renderer.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/animation/src/animation.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/samples/animation/src/animation.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/animation/src/animation.h" beforeDir="false" afterPath="$PROJECT_DIR$/samples/animation/src/animation.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/samples/camera/src/camera.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/samples/camera/src/camera.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/camera/src/camera.h" beforeDir="false" afterPath="$PROJECT_DIR$/samples/camera/src/camera.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/camera/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/samples/camera/src/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/camera/src/trackline.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/samples/camera/src/trackline.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/camera/src/trackline.h" beforeDir="false" afterPath="$PROJECT_DIR$/samples/camera/src/trackline.h" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/cmake-build-release/" />
@@ -29,12 +41,14 @@
     <session id="1045990187">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="17" />
+          <entry key="project.closed" value="21" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.1" value="5" />
           <entry key="project.open.time.10" value="2" />
-          <entry key="project.open.time.2" value="5" />
+          <entry key="project.open.time.12" value="1" />
+          <entry key="project.open.time.2" value="6" />
           <entry key="project.open.time.3" value="1" />
+          <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.46" value="1" />
           <entry key="project.open.time.52" value="1" />
           <entry key="project.open.time.55" value="1" />
@@ -42,15 +56,17 @@
           <entry key="project.open.time.65" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.71" value="1" />
-          <entry key="project.opened" value="23" />
+          <entry key="project.open.time.89" value="1" />
+          <entry key="project.opened" value="27" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="cpp" value="74" />
+          <entry key="cpp" value="102" />
           <entry key="gitignore" value="2" />
-          <entry key="h" value="77" />
-          <entry key="hpp" value="5" />
+          <entry key="h" value="104" />
+          <entry key="hpp" value="8" />
+          <entry key="inl" value="1" />
           <entry key="jpeg" value="2" />
           <entry key="jpg" value="1" />
           <entry key="png" value="6" />
@@ -61,21 +77,21 @@
         <counts>
           <entry key="CMakeLists.txt" value="10" />
           <entry key="Image" value="9" />
-          <entry key="ObjectiveC" value="156" />
+          <entry key="ObjectiveC" value="215" />
           <entry key="PLAIN_TEXT" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="1107" />
-          <entry key="h" value="785" />
+          <entry key="cpp" value="1773" />
+          <entry key="h" value="1128" />
           <entry key="txt" value="93" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CMakeLists.txt" value="93" />
-          <entry key="ObjectiveC" value="1892" />
+          <entry key="ObjectiveC" value="2901" />
         </counts>
       </usages-collector>
     </session>
@@ -85,8 +101,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/samples/camera/src/camera.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+            <state relative-caret-position="196">
+              <caret line="56" column="12" selection-start-line="56" selection-start-column="12" selection-end-line="56" selection-end-column="12" />
+              <folding>
+                <element signature="e#95#112#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -94,19 +113,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/samples/camera/src/camera.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="59" column="97" selection-start-line="59" selection-start-column="97" selection-end-line="59" selection-end-column="97" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/samples/camera/src/main.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="837">
-              <caret line="46" column="17" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="17" />
+            <state relative-caret-position="342">
+              <caret line="18" column="30" lean-forward="true" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
               <folding>
-                <element signature="e#38#60#0" expanded="true" />
+                <element signature="e#38#69#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -115,59 +125,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/samples/camera/src/trackline.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="909">
-              <caret line="298" lean-forward="true" selection-start-line="298" selection-end-line="298" />
+            <state relative-caret-position="342">
+              <caret line="23" selection-start-line="23" selection-end-line="23" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/module/opencv/calib/fish.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/module/opencv/calib/fish.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1957">
-              <caret line="103" column="33" selection-start-line="103" selection-start-column="33" selection-end-line="103" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/samples/camera/src/trackline.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="83" column="9" selection-start-line="83" selection-start-column="9" selection-end-line="83" selection-end-column="9" />
-              <folding>
-                <element signature="e#96#118#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/blizzard/src/shader.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="19" selection-start-line="19" selection-end-line="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/blizzard/src/texture.h">
+        <entry file="file://$PROJECT_DIR$/blizzard/src/game.h">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="133">
-              <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
-              <folding>
-                <element signature="e#96#118#0" expanded="true" />
-              </folding>
+              <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -175,10 +143,57 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/blizzard/src/sprite_renderer.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="741">
-              <caret line="39" column="24" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="24" />
+            <state relative-caret-position="196">
+              <caret line="26" column="65" selection-start-line="26" selection-start-column="65" selection-end-line="26" selection-end-column="65" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/samples/animation/src/animation.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="424">
+              <caret line="66" column="74" selection-start-line="66" selection-start-column="74" selection-end-line="66" selection-end-column="74" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/blizzard/src/sprite_renderer.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="6" column="78" selection-start-line="6" selection-start-column="72" selection-end-line="6" selection-end-column="78" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/samples/camera/src/trackline.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="19">
+              <caret line="81" column="7" selection-start-line="81" selection-start-column="4" selection-end-line="81" selection-end-column="13" />
+              <folding>
+                <element signature="e#96#118#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/blizzard/src/dconfig.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
+              <folding>
+                <element signature="e#96#115#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/module/opencv/vision/vision.cpp">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -189,6 +204,9 @@
       <find>calibrateCamera</find>
       <find>findChessboardCorners</find>
       <find>distort</find>
+      <find>glUniformMatrix3fv</find>
+      <find>glAttachShader</find>
+      <find>glBindBuffer</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -197,10 +215,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/blizzard/src/main.cpp" />
-        <option value="$PROJECT_DIR$/examples/animation/blizzard.h" />
-        <option value="$PROJECT_DIR$/blizzard/src/game.h" />
-        <option value="$PROJECT_DIR$/examples/animation/main.cpp" />
         <option value="$PROJECT_DIR$/examples/animation/animation.h" />
         <option value="$PROJECT_DIR$/examples/animation/animation.cpp" />
         <option value="$PROJECT_DIR$/module/opencv/include/opencv.h" />
@@ -225,7 +239,6 @@
         <option value="$PROJECT_DIR$/blizzard/src/texture_vision.h" />
         <option value="$PROJECT_DIR$/blizzard/src/texture_vision.cpp" />
         <option value="$PROJECT_DIR$/blizzard/src/texture.cpp" />
-        <option value="$PROJECT_DIR$/blizzard/src/resource_manager.cpp" />
         <option value="$PROJECT_DIR$/module/opencv/calib/checkerborad.h" />
         <option value="$PROJECT_DIR$/module/opencv/calib/fish.h" />
         <option value="$PROJECT_DIR$/module/opencv/calib/fish.cpp" />
@@ -235,16 +248,23 @@
         <option value="$PROJECT_DIR$/module/opencv/calib/Zhu.cpp" />
         <option value="$PROJECT_DIR$/module/opencv/calib/zhu.cpp" />
         <option value="$PROJECT_DIR$/module/opencv/trackline/trackline.cpp" />
-        <option value="$PROJECT_DIR$/samples/camera/src/main.cpp" />
         <option value="$PROJECT_DIR$/module/opencv/calib/checkerborad.cpp" />
-        <option value="$PROJECT_DIR$/blizzard/src/sprite_renderer.h" />
         <option value="$PROJECT_DIR$/module/opencv/calib/zhang.cpp" />
         <option value="$PROJECT_DIR$/module/opencv/trackline/trackline.h" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/samples/animation/src/animation.cpp" />
-        <option value="$PROJECT_DIR$/samples/camera/src/camera.h" />
+        <option value="$PROJECT_DIR$/blizzard/src/resource_manager.cpp" />
+        <option value="$PROJECT_DIR$/blizzard/src/shader.cpp" />
+        <option value="$PROJECT_DIR$/blizzard/src/shader.h" />
         <option value="$PROJECT_DIR$/samples/camera/src/trackline.h" />
         <option value="$PROJECT_DIR$/samples/camera/src/trackline.cpp" />
+        <option value="$PROJECT_DIR$/blizzard/src/game.h" />
+        <option value="$PROJECT_DIR$/blizzard/src/game_object.cpp" />
+        <option value="$PROJECT_DIR$/samples/animation/src/animation.h" />
+        <option value="$PROJECT_DIR$/samples/animation/src/animation.cpp" />
+        <option value="$PROJECT_DIR$/samples/camera/src/main.cpp" />
+        <option value="$PROJECT_DIR$/blizzard/src/sprite_renderer.h" />
+        <option value="$PROJECT_DIR$/samples/camera/src/camera.h" />
+        <option value="$PROJECT_DIR$/blizzard/src/sprite_renderer.cpp" />
         <option value="$PROJECT_DIR$/samples/camera/src/camera.cpp" />
       </list>
     </option>
@@ -256,11 +276,11 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="65" />
-    <option name="y" value="24" />
-    <option name="width" value="1853" />
-    <option name="height" value="1048" />
+    <option name="y" value="-4" />
+    <option name="width" value="1855" />
+    <option name="height" value="1084" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -270,7 +290,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -311,12 +330,25 @@
               <item name="Blizzard" type="462c0819:PsiDirectoryNode" />
               <item name="module" type="462c0819:PsiDirectoryNode" />
               <item name="opencv" type="462c0819:PsiDirectoryNode" />
-              <item name="calib" type="462c0819:PsiDirectoryNode" />
+              <item name="vision" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Blizzard" type="b2602c69:ProjectViewProjectNode" />
               <item name="Blizzard" type="462c0819:PsiDirectoryNode" />
               <item name="samples" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Blizzard" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Blizzard" type="462c0819:PsiDirectoryNode" />
+              <item name="samples" type="462c0819:PsiDirectoryNode" />
+              <item name="animation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Blizzard" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Blizzard" type="462c0819:PsiDirectoryNode" />
+              <item name="samples" type="462c0819:PsiDirectoryNode" />
+              <item name="animation" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Blizzard" type="b2602c69:ProjectViewProjectNode" />
@@ -335,6 +367,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -423,33 +456,37 @@
       <workItem from="1541655723146" duration="2303000" />
       <workItem from="1541740476056" duration="228000" />
       <workItem from="1541740721413" duration="6063000" />
-      <workItem from="1541754325299" duration="4659000" />
+      <workItem from="1541754325299" duration="5231000" />
+      <workItem from="1542004756738" duration="1502000" />
+      <workItem from="1542024346987" duration="37000" />
+      <workItem from="1542073447187" duration="2000" />
+      <workItem from="1542073480152" duration="17561000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76563000" />
+    <option name="totallyTimeSpent" value="96237000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="24" width="1853" height="1048" extended-state="0" />
+    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24406405" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25482625" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32852387" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.24417314" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.31590182" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.24332978" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991462" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32963374" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32870865" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="CMake" order="11" weight="0.3276414" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.32741398" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32657418" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -463,44 +500,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/module/opencv/calib/test.h" />
-    <entry file="file://$PROJECT_DIR$/module/opencv/calib/test.cpp" />
-    <entry file="file://$PROJECT_DIR$/module/opencv/calib/ret.cpp" />
-    <entry file="file://$PROJECT_DIR$/module/opencv/calib/ret.h" />
-    <entry file="file://$PROJECT_DIR$/module/opencv/vision/vision.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blizzard/src/texture_vision.cpp" />
-    <entry file="file://$PROJECT_DIR$/blizzard/src/texture_vision.h" />
-    <entry file="file://$PROJECT_DIR$/samples/animation/res/calibration/j59r001.png" />
-    <entry file="file://$PROJECT_DIR$/module/opencv/vision/vision.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/egl/egl.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blizzard/src/resource_manager.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-283">
-          <caret line="60" column="28" selection-start-line="60" selection-start-column="28" selection-end-line="60" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file:///usr/local/include/opencv2/calib3d.hpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4617">
@@ -512,13 +511,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="676" column="25" selection-start-line="676" selection-start-column="25" selection-end-line="676" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blizzard/src/dconfig.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
@@ -563,13 +555,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blizzard/src/sprite_renderer.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="27" column="34" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -622,48 +607,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/samples/animation/src/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/samples/animation/src/animation.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="31" column="20" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blizzard/src/texture.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blizzard/lib/glad/glad.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2660">
-          <caret line="140" column="14" selection-start-line="140" selection-start-column="14" selection-end-line="140" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blizzard/src/resource_manager.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="36" column="52" selection-start-line="36" selection-start-column="52" selection-end-line="36" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blizzard/src/game.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1216">
-          <caret line="64" column="8" selection-start-line="64" selection-start-column="8" selection-end-line="64" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/module/opencv/calib/checkerborad.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="760">
@@ -692,17 +635,155 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blizzard/src/shader.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/blizzard/src/texture.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
           <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blizzard/src/texture.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/opencv/vision/vision.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blizzard/lib/glad/glad.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="1238" column="8" selection-start-line="1238" selection-start-column="8" selection-end-line="1238" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/glm/detail/type_vec3.inl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="411">
+          <caret line="203" selection-start-line="203" selection-end-line="203" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/glm/detail/type_vec3.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="425" selection-start-line="425" selection-end-line="425" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/glm/vec3.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/glm/glm.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="97" selection-start-line="97" selection-end-line="97" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blizzard/src/game.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blizzard/src/resource_manager.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="95" column="27" selection-start-line="95" selection-start-column="27" selection-end-line="95" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blizzard/src/game_object.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="63" selection-start-line="14" selection-start-column="63" selection-end-line="14" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blizzard/src/resource_manager.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blizzard/src/shader.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="28" column="20" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blizzard/src/shader.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-150">
+          <caret line="79" column="13" selection-start-line="79" selection-start-column="13" selection-end-line="79" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/animation/src/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/animation/src/animation.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="34" column="34" selection-start-line="34" selection-start-column="34" selection-end-line="34" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blizzard/src/game_object.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/camera/src/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="42" column="45" selection-start-line="42" selection-start-column="45" selection-end-line="42" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/animation/src/animation.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="66" column="74" selection-start-line="66" selection-start-column="74" selection-end-line="66" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/opencv/vision/vision.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/camera/src/trackline.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blizzard/src/dconfig.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="e#96#115#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/camera/src/trackline.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="81" column="7" selection-start-line="81" selection-start-column="4" selection-end-line="81" selection-end-column="13" />
           <folding>
             <element signature="e#96#118#0" expanded="true" />
           </folding>
@@ -711,49 +792,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/blizzard/src/sprite_renderer.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="741">
-          <caret line="39" column="24" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="24" />
+        <state relative-caret-position="196">
+          <caret line="26" column="65" selection-start-line="26" selection-start-column="65" selection-end-line="26" selection-end-column="65" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/samples/camera/src/trackline.h">
+    <entry file="file://$PROJECT_DIR$/blizzard/src/sprite_renderer.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="83" column="9" selection-start-line="83" selection-start-column="9" selection-end-line="83" selection-end-column="9" />
-          <folding>
-            <element signature="e#96#118#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="114">
+          <caret line="6" column="78" selection-start-line="6" selection-start-column="72" selection-end-line="6" selection-end-column="78" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/samples/camera/src/camera.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/samples/camera/src/trackline.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="909">
-          <caret line="298" lean-forward="true" selection-start-line="298" selection-end-line="298" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/samples/camera/src/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="837">
-          <caret line="46" column="17" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="17" />
+        <state relative-caret-position="196">
+          <caret line="56" column="12" selection-start-line="56" selection-start-column="12" selection-end-line="56" selection-end-column="12" />
           <folding>
-            <element signature="e#38#60#0" expanded="true" />
+            <element signature="e#95#112#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blizzard/src/game.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/samples/camera/src/camera.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="59" column="97" selection-start-line="59" selection-start-column="97" selection-end-line="59" selection-end-column="97" />
+        <state relative-caret-position="342">
+          <caret line="18" column="30" lean-forward="true" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
+          <folding>
+            <element signature="e#38#69#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

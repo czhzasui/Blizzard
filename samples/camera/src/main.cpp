@@ -41,7 +41,7 @@ int main() {
         clock_t start = clock();
 
         glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
-        glClear(GL_COLOR_BUFFER_BIT);
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
         blizzard.processInput();
         blizzard.render(window);

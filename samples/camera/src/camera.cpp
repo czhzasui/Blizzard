@@ -13,20 +13,16 @@ void Camera::init() {
     glViewport(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
     glEnable(GL_CULL_FACE);
     glEnable(GL_BLEND);
+    glEnable(GL_DEPTH_TEST);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
     glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
     this->state = GAME_ACTIVE;
 
-    ResourceManager::loadShader("sprite", defaultVshaderStr, defaultFshaderStr);
+    ResourceManager::loadShader("camera", cameraVshaderStr, cameraFshaderStr);
 
-    glm::mat4 projection = glm::mat4(1.0f);
-    projection = glm::ortho(0.0f, static_cast<GLfloat>(this->width), static_cast<GLfloat>(this->height), 0.0f, -1.0f,
-                            1.0f);
-    ResourceManager::getShader("sprite").setInteger("image", 0);
-    ResourceManager::getShader("sprite").setMatrix4("projection", projection);
-    ResourceManager::getShader("sprite").setVector4f("location", glm::vec4(1.0f, 1.0f, 0.0f, 0.0f));
+    ResourceManager::getShader("camera").setInteger("image", 0);
 
-    spriteRender = new SpriteRenderer(ResourceManager::getShader("sprite"));
+    spriteRender = new SpriteRenderer(ResourceManager::getShader("camera"), cameraVertices, sizeof(cameraVertices));
 
     capture.open(0);
     if (!capture.isOpened()) {
@@ -57,7 +53,8 @@ void Camera::update() {
 
 void Camera::render(GLFWwindow *window) {
     if (this->state == GAME_ACTIVE) {
-        spriteRender->drawSprite(ResourceManager::getTexture2D("cb_final"), glm::vec2(1280, 480), glm::vec2(480, 240), 0.0f);
+        spriteRender->drawSprite3D(ResourceManager::getTexture2D("cb_final"), glm::vec3(0, 0, 0), glm::vec3(1, 1, 1),
+                                   0.0f, glm::vec3(1.0f, 1.0f, 1.0f), cameraIndices);
         usleep(1000 * 30);
     }
 }

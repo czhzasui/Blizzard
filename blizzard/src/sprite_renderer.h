@@ -16,20 +16,25 @@
 
 class SpriteRenderer {
 public:
-    SpriteRenderer(Shader shader);
+    SpriteRenderer(Shader shader, GLfloat *vertices = nullptr, GLuint length = 0);
 
     ~SpriteRenderer();
 
-    void drawSprite(Texture2D texture, glm::vec2 position, glm::vec2 size = glm::vec2(10, 10), GLfloat rotate = 0.0f,
-                    glm::vec3 color = glm::vec3(1.0f));
+    void drawSprite2D(Texture2D texture, glm::vec2 position, glm::vec2 size = glm::vec2(10, 10), GLfloat rotate = 0.0f,
+                    glm::vec3 color = glm::vec3(1.0f), GLuint *indices = nullptr);
+
+    void drawSprite3D(Texture2D texture, glm::vec3 position, glm::vec3 size = glm::vec3(1, 1, 1), GLfloat rotate = 0.0f,
+                      glm::vec3 color = glm::vec3(1.0f), GLuint *indices = nullptr);
 
 private:
     Shader shader;
     GLuint VAO;
 
-    void init();
+    void init1(GLfloat *vertices, GLuint length);
 
-    GLfloat vertices[16] = {
+    void init2(GLfloat *vertices, GLuint length);
+
+    GLfloat defaultVertices[16] = {
             // Pos      // Tex
             0.0f, 0.0f, 0.0f, 0.0f,
             0.0f, 1.0f, 0.0f, 1.0f,
@@ -37,7 +42,7 @@ private:
             1.0f, 0.0f, 1.0f, 0.0f
     };
 
-    const GLuint indices[6] = {
+    GLuint defaultIndices[6] = {
             0, 1, 2,
             0, 2, 3
     };

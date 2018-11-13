@@ -24,6 +24,21 @@ public:
     void render(GLFWwindow *window);
 
     void displayVideo(GLFWwindow *window);
+
+private:
+
+    GLfloat animationVertices[16] = {
+            // Pos      // Tex
+            0.0f, 0.0f, 0.0f, 0.0f,
+            0.0f, 1.0f, 0.0f, 1.0f,
+            1.0f, 1.0f, 1.0f, 1.0f,
+            1.0f, 0.0f, 1.0f, 0.0f
+    };
+
+    GLuint animationIndices[6] = {
+            0, 1, 2,
+            0, 2, 3
+    };
 };
 
 

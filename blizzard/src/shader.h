@@ -24,11 +24,15 @@ public:
 
     void setInteger(const GLchar *name, GLint value, GLboolean useShader = true);
 
+    void setFloat(const GLchar *name, const float &value, GLboolean useShader = true);
+
     void setVector2f(const GLchar *name, const glm::vec2 &value, GLboolean useShader = true);
 
     void setVector3f(const GLchar *name, const glm::vec3 &value, GLboolean useShader = true);
 
     void setVector4f(const GLchar *name, const glm::vec4 &value, GLboolean useShader = true);
+
+    void setMatrix3(const GLchar *name, const glm::mat3 &matrix, GLboolean useShader = true);
 
     void setMatrix4(const GLchar *name, const glm::mat4 &matrix, GLboolean useShader = true);
 

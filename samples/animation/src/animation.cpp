@@ -25,7 +25,7 @@ void Animation::init() {
     ResourceManager::loadTexture2D("opening2", "../samples/animation/res/textures/opening1,2.png");
     ResourceManager::getShader("sprite").setVector4f("location", glm::vec4(1.0f, 1.0f, 0.0f, 0.0f));
 
-    spriteRender = new SpriteRenderer(ResourceManager::getShader("sprite"));
+    spriteRender = new SpriteRenderer(ResourceManager::getShader("sprite"), animationVertices, sizeof(animationVertices));
 }
 
 void Animation::destory() {
@@ -60,12 +60,12 @@ void Animation::displayVideo(GLFWwindow *window){
 
         if(i%6 < 3){
             ResourceManager::getShader("sprite").setVector4f("location", glm::vec4(scaleX, scaleY, moveX, moveY));
-            spriteRender->drawSprite(ResourceManager::getTexture2D("opening1"), glm::vec2(0.0f, 0.0f), glm::vec2(1280.0f, 480.0f), 0.0f,
-                                     glm::vec3(1.0f, 1.0f, 1.0f));
+            spriteRender->drawSprite2D(ResourceManager::getTexture2D("opening1"), glm::vec2(0.0f, 0.0f), glm::vec2(1280.0f, 480.0f), 0.0f,
+                                     glm::vec3(1.0f, 1.0f, 1.0f), animationIndices);
         } else{
             ResourceManager::getShader("sprite").setVector4f("location", glm::vec4(scaleX, scaleY, moveX, moveY));
-            spriteRender->drawSprite(ResourceManager::getTexture2D("opening2"), glm::vec2(0.0f, 0.0f), glm::vec2(1280.0f, 480.0f), 0.0f,
-                                     glm::vec3(1.0f, 1.0f, 1.0f));
+            spriteRender->drawSprite2D(ResourceManager::getTexture2D("opening2"), glm::vec2(0.0f, 0.0f), glm::vec2(1280.0f, 480.0f), 0.0f,
+                                     glm::vec3(1.0f, 1.0f, 1.0f), animationIndices);
         }
 #ifdef  SML
         std::cout << moveX << "," << moveY << std::endl;

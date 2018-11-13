@@ -158,29 +158,22 @@ Trackline::~Trackline() {
 }
 
 void Trackline::init() {
-/*    m_programObject = GLshader::CompileShaders(vShaderStr, fShaderStr, mVertexShader, mFragmentShader);
+    /*ResourceManager::loadShader("trackline", vShader, fShader, nullptr);
 
-    glUseProgram(m_programObject);
-    GLint g_mvpMatrix = glGetUniformLocation(m_programObject, "u_mvpMat");
-    glUniformMatrix3fv(g_mvpMatrix, 1, false, &m_fProjection[0][0]);
+    glm::mat3 M = glm::mat3(1.0f);
+    M = glm::make_mat3x3(m_fProjection);
+    ResourceManager::getShader("trackline").setMatrix3("u_mvpMat", M);
 
-    GLint g_k1 = glGetUniformLocation(m_programObject, "k1");
-    glUniform1f(g_k1, trackinglinePara->cameraProp.k1);
-
-    GLint g_f = glGetUniformLocation(m_programObject, "f");
-    glUniform1f(g_f, trackinglinePara->cameraProp.f);
-
-    GLint g_x0 = glGetUniformLocation(m_programObject, "x0");
-    glUniform1f(g_x0, trackinglinePara->cameraProp.x0);
-
-    GLint g_y0 = glGetUniformLocation(m_programObject, "y0");
-    glUniform1f(g_y0, trackinglinePara->cameraProp.y0);
-
-    glEnable(GL_BLEND);
-    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-#define GL_PRIMITIVE_RESTART_FIXED_INDEX  0x8D69
+    ResourceManager::getShader("trackline").setFloat("k1", trackinglineParam->cameraParam.k1);
+    ResourceManager::getShader("trackline").setFloat("f", trackinglineParam->cameraParam.f);
+    ResourceManager::getShader("trackline").setFloat("x0", trackinglineParam->cameraParam.x0);
+    ResourceManager::getShader("trackline").setFloat("y0", trackinglineParam->cameraParam.y0);
 
     glEnable(GL_PRIMITIVE_RESTART_FIXED_INDEX);*/
+}
+
+void Trackline::deInit() {
+
 }
 
 void Trackline::setMatrix() {
@@ -223,56 +216,56 @@ void Trackline::setStaticLine() {
             GLfloat halfwidth = staticLineParam->width / 2.0;
             if (staticLineParam->startX == staticLineParam->endX) {
 
-                setVertices(vertices, (staticLineParam->startX - halfwidth), staticLineParam->startY, staticLineParam->color, false);
-                setVertices(vertices, (staticLineParam->startX + halfwidth), staticLineParam->startY, staticLineParam->color, false);
-                setVertices(vertices, (staticLineParam->endX - halfwidth), staticLineParam->endY, staticLineParam->color, false);
-                setVertices(vertices, (staticLineParam->endX + halfwidth), staticLineParam->endY, staticLineParam->color, false);
+                setVertices(staticVertices, (staticLineParam->startX - halfwidth), staticLineParam->startY, staticLineParam->color, false);
+                setVertices(staticVertices, (staticLineParam->startX + halfwidth), staticLineParam->startY, staticLineParam->color, false);
+                setVertices(staticVertices, (staticLineParam->endX - halfwidth), staticLineParam->endY, staticLineParam->color, false);
+                setVertices(staticVertices, (staticLineParam->endX + halfwidth), staticLineParam->endY, staticLineParam->color, false);
 
-                setVertices(vertices, (staticLineParam->startX - halfwidth), staticLineParam->startY, staticLineParam->color, false);
-                setVertices(vertices, (staticLineParam->startX - halfwidth - lineWidth), staticLineParam->startY, staticLineParam->color, true);
-                setVertices(vertices, (staticLineParam->endX - halfwidth), staticLineParam->endY, staticLineParam->color, false);
-                setVertices(vertices, (staticLineParam->endX - halfwidth - lineWidth), staticLineParam->endY, staticLineParam->color, true);
+                setVertices(staticVertices, (staticLineParam->startX - halfwidth), staticLineParam->startY, staticLineParam->color, false);
+                setVertices(staticVertices, (staticLineParam->startX - halfwidth - lineWidth), staticLineParam->startY, staticLineParam->color, true);
+                setVertices(staticVertices, (staticLineParam->endX - halfwidth), staticLineParam->endY, staticLineParam->color, false);
+                setVertices(staticVertices, (staticLineParam->endX - halfwidth - lineWidth), staticLineParam->endY, staticLineParam->color, true);
 
-                setVertices(vertices, (staticLineParam->startX + halfwidth), staticLineParam->startY, staticLineParam->color, false);
-                setVertices(vertices, (staticLineParam->startX + halfwidth + lineWidth), staticLineParam->startY, staticLineParam->color, true);
-                setVertices(vertices, (staticLineParam->endX + halfwidth), staticLineParam->endY, staticLineParam->color, false);
-                setVertices(vertices, (staticLineParam->endX + halfwidth + lineWidth), staticLineParam->endY, staticLineParam->color, true);
+                setVertices(staticVertices, (staticLineParam->startX + halfwidth), staticLineParam->startY, staticLineParam->color, false);
+                setVertices(staticVertices, (staticLineParam->startX + halfwidth + lineWidth), staticLineParam->startY, staticLineParam->color, true);
+                setVertices(staticVertices, (staticLineParam->endX + halfwidth), staticLineParam->endY, staticLineParam->color, false);
+                setVertices(staticVertices, (staticLineParam->endX + halfwidth + lineWidth), staticLineParam->endY, staticLineParam->color, true);
             } else if (staticLineParam->startY == staticLineParam->endY) {
 
-                setVertices(vertices, staticLineParam->startX, staticLineParam->startY - halfwidth, staticLineParam->color, false);
-                setVertices(vertices, staticLineParam->startX, staticLineParam->startY + halfwidth, staticLineParam->color, false);
-                setVertices(vertices, staticLineParam->endX, staticLineParam->endY - halfwidth, staticLineParam->color, false);
-                setVertices(vertices, staticLineParam->endX, staticLineParam->endY + halfwidth, staticLineParam->color, false);
+                setVertices(staticVertices, staticLineParam->startX, staticLineParam->startY - halfwidth, staticLineParam->color, false);
+                setVertices(staticVertices, staticLineParam->startX, staticLineParam->startY + halfwidth, staticLineParam->color, false);
+                setVertices(staticVertices, staticLineParam->endX, staticLineParam->endY - halfwidth, staticLineParam->color, false);
+                setVertices(staticVertices, staticLineParam->endX, staticLineParam->endY + halfwidth, staticLineParam->color, false);
 
-                setVertices(vertices, staticLineParam->startX, staticLineParam->startY - halfwidth, staticLineParam->color, false);
-                setVertices(vertices, staticLineParam->startX, staticLineParam->startY - halfwidth - lineWidth, staticLineParam->color, true);
-                setVertices(vertices, staticLineParam->endX, staticLineParam->endY - halfwidth, staticLineParam->color, false);
-                setVertices(vertices, staticLineParam->endX, staticLineParam->endY - halfwidth - lineWidth, staticLineParam->color, true);
+                setVertices(staticVertices, staticLineParam->startX, staticLineParam->startY - halfwidth, staticLineParam->color, false);
+                setVertices(staticVertices, staticLineParam->startX, staticLineParam->startY - halfwidth - lineWidth, staticLineParam->color, true);
+                setVertices(staticVertices, staticLineParam->endX, staticLineParam->endY - halfwidth, staticLineParam->color, false);
+                setVertices(staticVertices, staticLineParam->endX, staticLineParam->endY - halfwidth - lineWidth, staticLineParam->color, true);
 
-                setVertices(vertices, staticLineParam->startX, staticLineParam->startY + halfwidth, staticLineParam->color, false);
-                setVertices(vertices, staticLineParam->startX, staticLineParam->startY + halfwidth + lineWidth, staticLineParam->color, true);
-                setVertices(vertices, staticLineParam->endX, staticLineParam->endY + halfwidth, staticLineParam->color, false);
-                setVertices(vertices, staticLineParam->endX, staticLineParam->endY + halfwidth + lineWidth, staticLineParam->color, true);
+                setVertices(staticVertices, staticLineParam->startX, staticLineParam->startY + halfwidth, staticLineParam->color, false);
+                setVertices(staticVertices, staticLineParam->startX, staticLineParam->startY + halfwidth + lineWidth, staticLineParam->color, true);
+                setVertices(staticVertices, staticLineParam->endX, staticLineParam->endY + halfwidth, staticLineParam->color, false);
+                setVertices(staticVertices, staticLineParam->endX, staticLineParam->endY + halfwidth + lineWidth, staticLineParam->color, true);
             } else {
                 GLfloat grad = (staticLineParam->endY - staticLineParam->startY) / (staticLineParam->endX - staticLineParam->startX);
                 GLfloat part_x = halfwidth * grad / sqrt(1.0 + grad * grad);
                 GLfloat part_y = halfwidth / sqrt(1.0 + grad * grad);
                 GLfloat transWidth_x = lineWidth * grad / sqrt(1.0 + grad * grad);
                 GLfloat transWidth_y = lineWidth / sqrt(1.0 + grad * grad);
-                setVertices(vertices, staticLineParam->startX - part_x, staticLineParam->startY + part_y, staticLineParam->color, false);
-                setVertices(vertices, staticLineParam->startX + part_x, staticLineParam->startY - part_y, staticLineParam->color, false);
-                setVertices(vertices, staticLineParam->endX - part_x, staticLineParam->endY + part_y, staticLineParam->color, false);
-                setVertices(vertices, staticLineParam->endX + part_x, staticLineParam->endY - part_y, staticLineParam->color, false);
+                setVertices(staticVertices, staticLineParam->startX - part_x, staticLineParam->startY + part_y, staticLineParam->color, false);
+                setVertices(staticVertices, staticLineParam->startX + part_x, staticLineParam->startY - part_y, staticLineParam->color, false);
+                setVertices(staticVertices, staticLineParam->endX - part_x, staticLineParam->endY + part_y, staticLineParam->color, false);
+                setVertices(staticVertices, staticLineParam->endX + part_x, staticLineParam->endY - part_y, staticLineParam->color, false);
 
 
-                setVertices(vertices, staticLineParam->startX - part_x, staticLineParam->startY + part_y, staticLineParam->color, false);
-                setVertices(vertices, staticLineParam->startX - part_x - transWidth_x, staticLineParam->startY + part_y + transWidth_y, staticLineParam->color, false);
-                setVertices(vertices, staticLineParam->endX - part_x, staticLineParam->endY + part_y, staticLineParam->color, false);
-                setVertices(vertices, staticLineParam->endX - part_x - transWidth_x, staticLineParam->endY + part_y + transWidth_y, staticLineParam->color, false);
-                setVertices(vertices, staticLineParam->startX + part_x, staticLineParam->startY - part_y, staticLineParam->color, false);
-                setVertices(vertices, staticLineParam->startX + part_x + transWidth_x, staticLineParam->startY - part_y - transWidth_y, staticLineParam->color, false);
-                setVertices(vertices, staticLineParam->endX + part_x, staticLineParam->endY - part_y, staticLineParam->color, false);
-                setVertices(vertices, staticLineParam->endX + part_x + transWidth_x, staticLineParam->endY - part_y - transWidth_y, staticLineParam->color, false);
+                setVertices(staticVertices, staticLineParam->startX - part_x, staticLineParam->startY + part_y, staticLineParam->color, false);
+                setVertices(staticVertices, staticLineParam->startX - part_x - transWidth_x, staticLineParam->startY + part_y + transWidth_y, staticLineParam->color, false);
+                setVertices(staticVertices, staticLineParam->endX - part_x, staticLineParam->endY + part_y, staticLineParam->color, false);
+                setVertices(staticVertices, staticLineParam->endX - part_x - transWidth_x, staticLineParam->endY + part_y + transWidth_y, staticLineParam->color, false);
+                setVertices(staticVertices, staticLineParam->startX + part_x, staticLineParam->startY - part_y, staticLineParam->color, false);
+                setVertices(staticVertices, staticLineParam->startX + part_x + transWidth_x, staticLineParam->startY - part_y - transWidth_y, staticLineParam->color, false);
+                setVertices(staticVertices, staticLineParam->endX + part_x, staticLineParam->endY - part_y, staticLineParam->color, false);
+                setVertices(staticVertices, staticLineParam->endX + part_x + transWidth_x, staticLineParam->endY - part_y - transWidth_y, staticLineParam->color, false);
             }
             indices.push_back(index++);
             indices.push_back(index++);
@@ -296,4 +289,21 @@ void Trackline::setStaticLine() {
         printf("#Linked list error\n");
     }
 }
+
+void Trackline::render() {
+    ResourceManager::getShader("trackline").use();
+
+    if (!staticVertices.empty()) {
+        // Load the vertex data
+        glVertexAttribPointer(0, 4, GL_FLOAT, false, 8 * sizeof(GLfloat), &staticVertices[0]);
+        glEnableVertexAttribArray(0);
+
+        // Load the color data
+        glVertexAttribPointer(1, 4, GL_FLOAT, false, 8 * sizeof(GLfloat), &staticVertices[0] + 4);
+        glEnableVertexAttribArray(1);
+
+        glDrawElements(GL_TRIANGLE_STRIP, 11, GL_UNSIGNED_BYTE, &staticVertices[0]);
+    }
+}
+
 
